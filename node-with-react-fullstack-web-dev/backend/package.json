@@ -1,0 +1,51 @@
+{
+  "name": "node-with-react-api",
+  "version": "1.0.0",
+  "description": "Backend api build in node with react Fullstack web development Udemy course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_PATH=src nodemon index.js",
+    "debug": "NODE_PATH=src nodemon --inspect",
+    "start": "NODE_PATH=src node index.js"
+  },
+  "keywords": [
+    "udemy",
+    "certificate",
+    "api",
+    "nodejs",
+    "promises",
+    "stripe",
+    "googleAuth2.0",
+    "mongoDB"
+  ],
+  "author": "Rúben Gomes <gomesruben21@gmail.com> (https://rubengomex.github.io/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubengomex/certificates.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rubengomex/certifcates/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.4.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-mocha": "^5.2.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.3",
+    "prettier": "^1.15.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "helmet": "^3.13.0",
+    "mongoose": "^5.2.9"
+  }
+}
