@@ -1,5 +1,6 @@
 # Local
 .DS_Store
+.vscode
 
 # Logs
 logs
@@ -65,3 +66,6 @@ typings/
 
 # package lock
 package-lock.json
+
+# sub tree (only keep the contents)
+node-with-react-fullstack-web-dev/
