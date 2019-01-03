@@ -1,1 +1,4 @@
-{}
+{
+  "MONGO_DATABASE_NAME": "emaily-app",
+  "MONGO_URL": "mongodb://localhost:27017"
+}
