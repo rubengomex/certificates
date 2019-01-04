@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_PATH=server nodemon -r dotenv/config",
+    "dev": "NODE_PATH=server NODE_ENV=dev nodemon -r dotenv/config",
     "debug": "NODE_PATH=server nodemon --inspect -r dotenv/config",
     "start": "NODE_PATH=server node ."
   },

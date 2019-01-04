@@ -9,7 +9,7 @@ const database = require('database')
 const router = require('routing')
 const app = require('express')()
 const port = config.get('PORT')
-const env = config.get('ENV')
+const env = config.get('NODE_ENV')
 
 // Ensures that User collection is created when we boot the app
 require('api/users/model')
@@ -21,7 +21,7 @@ app.use(responseTime())
 app.use(cors())
 app.use(helmet())
 // logger
-if(env && (env === 'dev' || env === 'development')) {
+if(env === 'dev') {
   app.use(require('morgan')('tiny'))
 }
 // content-type allowed
@@ -42,7 +42,7 @@ app.use('/', router)
 // handle the next(error) calls
 app.use((info, req, res, next) => {
   const { status, message } = info
-  if(env && (env === 'dev' || env === 'development')) {
+  if(env === 'dev') {
     console.log(JSON.stringify(info, null, 2))
   }
   res.status(status).send(message)
