@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "Backend api build in node with react Fullstack web development Udemy course.",
   "main": "index.js",
+  "engines": {
+    "node": "8.9.1",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_PATH=server nodemon index.js",
-    "debug": "NODE_PATH=server nodemon --inspect",
-    "start": "NODE_PATH=server node index.js"
+    "dev": "NODE_PATH=server nodemon -r dotenv/config",
+    "debug": "NODE_PATH=server nodemon --inspect -r dotenv/config",
+    "start": "NODE_PATH=server node ."
   },
   "keywords": [
     "udemy",
@@ -30,6 +34,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "dotenv": "^6.2.0",
     "eslint": "^5.4.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.14.0",
@@ -44,9 +49,13 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "cors": "^2.8.5",
     "express": "^4.16.3",
     "helmet": "^3.13.0",
     "mongoose": "^5.2.9",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
     "response-time": "^2.3.2"
   }
 }

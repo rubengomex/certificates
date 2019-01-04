@@ -36,7 +36,7 @@ module.exports = {
     ],
     eqeqeq: ['error', 'always'],
     indent: ['error', 2],
-    'operator-linebreak': ['error', 'none'],
+    // 'operator-linebreak': ['error', 'none'],
     'comma-dangle': [
       'error',
       {
