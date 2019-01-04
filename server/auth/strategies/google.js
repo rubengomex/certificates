@@ -7,7 +7,8 @@ const googleStrategy = new Strategy(
   {
     clientID: config.get('GOOGLE_CLIENT_ID'),
     clientSecret: config.get('GOOGLE_CLIENT_SECRET'),
-    callbackURL: '/auth/google/callback'
+    callbackURL: '/auth/google/callback',
+    proxy: true
   },
   async (accessToken, refreshToken, profile, done) => {
     const user = await User.findOne({ googleId: profile.id })
