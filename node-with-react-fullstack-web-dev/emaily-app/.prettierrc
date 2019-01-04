@@ -1,8 +1,17 @@
 {
   "semi": false,
   "singleQuote": true,
+  "trailingComma": "all",
   "eslintIntegration": true,
   "stylelintIntegration": true,
   "printWidth": 80,
-  "disableLanguages": []
+  "disableLanguages": [],
+  "overrides": [
+    {
+      "files": ["*.css", "*.scss", "*.sass"],
+      "options": {
+        "printWidth": 1000
+      }
+    }
+  ]
 }
