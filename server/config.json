@@ -1,4 +1,9 @@
 {
   "MONGO_DATABASE_NAME": "emaily-app",
-  "MONGO_URL": "mongodb://localhost:27017"
+  "MONGO_URL": "mongodb://localhost:27017",
+  "GOOGLE_CLIENT_ID": "YOUR_GOOGLE CLIENT ID",
+  "GOOGLE_CLIENT_SECRET": "YOUR_GOOGLE CLIENT SECRET",
+  "COOKIE_SESSION_KEY": "sadlçaskdmnccbyuewgqowejdoqfbqkj",
+  "PORT": 3000,
+  "ENV": "dev"
 }
