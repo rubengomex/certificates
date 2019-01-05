@@ -45,8 +45,6 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.disable('x-powered-by')
-
 // routes
 app.use('/', router)
 
