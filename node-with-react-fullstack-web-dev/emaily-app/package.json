@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "NODE_PATH=server nodemon --inspect -r dotenv/config",
+    "debug": "NODE_PATH=server NODE_ENV=dev nodemon --inspect -r dotenv/config",
     "server": "NODE_PATH=server NODE_ENV=dev nodemon -r dotenv/config",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
