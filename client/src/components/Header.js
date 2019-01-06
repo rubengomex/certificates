@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import Payments from './Payments'
 
 class Header extends Component {
   renderContent() {
-    switch (this.props.auth) {
+    switch (this.props.userIsLoggedIn) {
     case null:
       return
     case false:
@@ -13,11 +15,14 @@ class Header extends Component {
         </li>
       )
     default:
-      return (
-        <li>
+      return [
+        <li key="1">
+          <Payments />
+        </li>,
+        <li key="2">
           <a href="/auth/logout"> Logout</a>
-        </li>
-      )
+        </li>,
+      ]
     }
   }
 
@@ -25,9 +30,12 @@ class Header extends Component {
     return (
       <nav>
         <div className="nav-wrapper">
-          <a href="#" className="left brand-logo">
+          <Link
+            to={this.props.userIsLoggedIn ? '/surveys' : '/'}
+            className="left brand-logo"
+          >
             Emaily
-          </a>
+          </Link>
           <ul id="nav-mobile" className="right">
             {this.renderContent()}
           </ul>
@@ -37,6 +45,6 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = ({ auth }) => ({ auth })
+const mapStateToProps = ({ userIsLoggedIn }) => ({ userIsLoggedIn })
 
 export default connect(mapStateToProps)(Header)
