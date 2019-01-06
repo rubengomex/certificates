@@ -4,4 +4,5 @@ const users = require('api/users/routes')
 
 router.use('/auth/', auth)
 router.use('/api/users/', users)
+
 module.exports = router

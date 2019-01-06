@@ -45,6 +45,6 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = ({ userIsLoggedIn }) => ({ userIsLoggedIn })
+const mapStateToProps = ({ user }) => ({ userIsLoggedIn: user })
 
 export default connect(mapStateToProps)(Header)

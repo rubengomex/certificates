@@ -9,7 +9,6 @@ const expressValidator = require('express-validator')
 const passport = require('passport')
 const config = require('configuration')
 const database = require('database')
-const router = require('routing')
 const app = require('express')()
 const port = config.get('PORT')
 const env = config.get('NODE_ENV')
@@ -46,7 +45,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // routes
-app.use('/', router)
+app.use('/', require('routing'))
 
 // handle the next(error) calls
 if(env === 'dev') {
