@@ -61,7 +61,7 @@ if(env === 'dev') {
   // if it doesn't recognized the route
   const path = require('path')
   app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    res.sendFile(path.resolve(__dirname, '..', 'client', 'build', 'index.html'))
   )
 
   // handle error properly
