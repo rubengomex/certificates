@@ -13,7 +13,8 @@
     "server": "NODE_PATH=server NODE_ENV=dev nodemon -r dotenv/config",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "NODE_PATH=server node ."
+    "start": "NODE_PATH=server node .",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix && client npm run build --prefix client"
   },
   "keywords": [
     "udemy",
