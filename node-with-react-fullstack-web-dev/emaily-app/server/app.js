@@ -14,8 +14,9 @@ const port = config.get('PORT')
 const env = config.get('NODE_ENV')
 const app = express()
 
-// Ensures that User collection is created when we boot the app
+// Ensures that mongoose collections are loaded when we boot the app
 require('api/users/model')
+require('api/surveys/model')
 // auth/passport load config
 require('auth/config')
 
