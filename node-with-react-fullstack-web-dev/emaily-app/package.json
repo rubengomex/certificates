@@ -65,6 +65,7 @@
     "mongoose": "^5.2.9",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0",
-    "response-time": "^2.3.2"
+    "response-time": "^2.3.2",
+    "stripe": "^6.20.0"
   }
 }
