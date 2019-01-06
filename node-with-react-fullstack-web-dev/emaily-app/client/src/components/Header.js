@@ -5,7 +5,7 @@ import Payments from './Payments'
 
 class Header extends Component {
   renderContent() {
-    switch (this.props.userIsLoggedIn) {
+    switch (this.props.user) {
     case null:
       return
     case false:
@@ -19,7 +19,10 @@ class Header extends Component {
         <li key="1">
           <Payments />
         </li>,
-        <li key="2">
+        <li key="2" style={{ margin: '0 10px' }}>
+            Credits: {this.props.user.credits}
+        </li>,
+        <li key="3">
           <a href="/auth/logout"> Logout</a>
         </li>,
       ]
@@ -31,7 +34,7 @@ class Header extends Component {
       <nav>
         <div className="nav-wrapper">
           <Link
-            to={this.props.userIsLoggedIn ? '/surveys' : '/'}
+            to={this.props.user ? '/surveys' : '/'}
             className="left brand-logo"
           >
             Emaily
@@ -45,6 +48,6 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({ userIsLoggedIn: user })
+const mapStateToProps = ({ user }) => ({ user })
 
 export default connect(mapStateToProps)(Header)
