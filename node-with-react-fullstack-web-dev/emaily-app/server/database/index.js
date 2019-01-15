@@ -1,10 +1,11 @@
-const mongoose = require('mongoose')
+const Sequelize = require('sequelize')
 const config = require('configuration')
 const url = config.get('MONGO_URL')
-const db = config.get('MONGO_DATABASE_NAME')
+const db = config.get('SEQUELIZE_DATABASE_NAME')
+const dbUser = config.get('SEQUELIZE_DATABASE_USER_NAME')
+const dbPass = config.get('SEQUELIZE_DATABASE_PASSWORD')
 
 exports.connect = () => {
-  mongoose.Promise = global.Promise
   return new Promise((resolve, reject) => {
     mongoose.connect(
       `${url}/${db}`,
