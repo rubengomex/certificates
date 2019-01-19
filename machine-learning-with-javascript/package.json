@@ -36,6 +36,8 @@
     "prettier": "^1.15.3"
   },
   "dependencies": {
-    "lodash": "^4.17.11"
+    "@tensorflow/tfjs-node": "^0.2.3",
+    "lodash": "^4.17.11",
+    "shuffle-seed": "^1.1.6"
   }
 }

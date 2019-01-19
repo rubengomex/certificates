@@ -70,3 +70,5 @@ package-lock.json
 # sub tree (only keep the contents)
 node-with-react-fullstack-web-dev/
 chatbots/
+machine-learning-with-javascript/
+the-complete-developers-guide-to-mongodb/
