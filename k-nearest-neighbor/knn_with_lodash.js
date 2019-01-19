@@ -1,3 +1,5 @@
+// Classification example
+// Ball bucket (guess where the ball would fall)
 const _ = require('lodash')
 // need to fill out
 const outputs = []
