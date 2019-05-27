@@ -1,0 +1,4 @@
+.vscode/
+client/public
+*.css
+*.html
