@@ -1,0 +1,67 @@
+{
+  "name": "advanced-css-and-sass",
+  "version": "1.0.0",
+  "description": "Advanced css and sass Udemy course.",
+  "main": "index.js",
+  "engines": {
+    "node": "8.14.0",
+    "npm": "6.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "NODE_PATH=server NODE_ENV=dev nodemon --inspect -r dotenv/config",
+    "server": "NODE_PATH=server NODE_ENV=dev nodemon -r dotenv/config",
+    "start": "NODE_PATH=server node ."
+  },
+  "keywords": [
+    "udemy",
+    "certificate",
+    "css",
+    "html",
+    "sass"
+  ],
+  "author": "Rúben Gomes <gomesruben21@gmail.com> (https://rubengomex.github.io/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubengomex/certificates.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rubengomex/certifcates/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "9.0.0",
+    "concurrently": "^4.1.0",
+    "dotenv": "^6.2.0",
+    "errorhandler": "^1.5.0",
+    "eslint": "5.6.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-mocha": "^5.2.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.3",
+    "prettier": "^1.15.3",
+    "stylelint": "^9.9.0",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.1",
+    "compression": "^1.7.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.3",
+    "express-validator": "^5.3.1",
+    "helmet": "^3.13.0",
+    "mongoose": "^5.2.9",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "response-time": "^2.3.2",
+    "sendgrid": "^5.2.3",
+    "stripe": "^6.20.0"
+  }
+}
