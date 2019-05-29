@@ -26,14 +26,6 @@ module.exports = {
         asyncArrow: 'always'
       }
     ],
-    'keyword-spacing': [
-      'error',
-      {
-        overrides: {
-          if: { after: false }
-        }
-      }
-    ],
     eqeqeq: ['error', 'always'],
     indent: ['error', 2],
     'comma-dangle': [
