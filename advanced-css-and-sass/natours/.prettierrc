@@ -4,5 +4,13 @@
   "trailingComma": "none",
   "eslintIntegration": true,
   "printWidth": 80,
-  "disableLanguages": []
+  "disableLanguages": [],
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "options": {
+        "printWidth": 160
+      }
+    }
+  ]
 }
