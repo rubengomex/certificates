@@ -1,6 +1,7 @@
 import faker from 'faker'
+import { IMappable } from '../interfaces'
 
-export default class User {
+export class User implements IMappable {
   name: string
   location: {
     lat: number
@@ -13,5 +14,9 @@ export default class User {
       lat: parseFloat(faker.address.latitude()),
       lng: parseFloat(faker.address.longitude())
     }
+  }
+
+  markerContent(): string {
+    return `User Name: ${this.name}`
   }
 }

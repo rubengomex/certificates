@@ -1,4 +1,6 @@
-import { User } from './entities'
+import { User, Map, Company } from './entities'
 
-const user = new User()
-console.log(user)
+const map = new Map('map')
+
+map.addMarker(new User())
+map.addMarker(new Company())
