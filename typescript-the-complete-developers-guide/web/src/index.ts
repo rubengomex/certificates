@@ -1,3 +1,17 @@
-import { User } from './models/User'
+import { Collection } from './models/Collection'
+import { UserProps, User } from './models/User'
+import { UserList } from './views/UserList'
 
-const user = new User()
+const users = new Collection('http://localhost:3000/users', (json: UserProps) =>
+  User.buildUser(json)
+)
+
+users.on('change', () => {
+  const root = document.getElementById('root')
+
+  if (!root) return
+
+  new UserList(root, users).render()
+})
+
+users.fetch()
