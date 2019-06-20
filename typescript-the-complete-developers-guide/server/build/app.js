@@ -6,15 +6,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
 var body_parser_1 = __importDefault(require("body-parser"));
 var cookie_session_1 = __importDefault(require("cookie-session"));
-var controller_1 = require("./decorators/controller");
+var routing_1 = require("./routing");
+require("./routing/controller");
 require("./auth/controller");
-var routes_1 = require("./auth/routes");
 var app = express_1.default();
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.use(body_parser_1.default.json());
 app.use(cookie_session_1.default({ keys: ['some-secret-key'] }));
-app.use('/', routes_1.router);
-app.use(controller_1.router);
+app.use(routing_1.AppRouter.getInstance());
 app.listen(3000, function () {
     console.log('app running');
 });
