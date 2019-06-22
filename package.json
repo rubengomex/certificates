@@ -8,7 +8,6 @@
     "npm": "6.4.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "live:server": "live-server",
     "compile:sass": "node-sass sass/main.sass dist/css/main.css -w",
     "dev": "concurrently \"npm run compile:sass\" \"npm run live:server\""
