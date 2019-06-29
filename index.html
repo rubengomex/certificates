@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,19 +21,19 @@
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>01</span> About Natours</a>
+            <a href="#section-about" class="navigation__link"><span>01</span> About Natours</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"> <span>02</span> Your benefits</a>
+            <a href="#section-features" class="navigation__link"> <span>02</span> Your benefits</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>03</span> Popular tours</a>
+            <a href="#section-tours" class="navigation__link"><span>03</span> Popular tours</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"> <span>04</span> Stories</a>
+            <a href="#section-stories" class="navigation__link"> <span>04</span> Stories</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"> <span>05</span> Book now</a>
+            <a href="#section-book" class="navigation__link"> <span>05</span> Book now</a>
           </li>
         </ul>
       </nav>
@@ -49,14 +50,14 @@
           <span class="heading-primary--main"> Outdoors</span>
           <span class="heading-primary--sub"> is where life happens</span>
         </h1>
-        <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+        <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
       </div>
     </header>
 
     <!-- SECTIONS -->
     <main>
       <!-- ABOUT -->
-      <section class="section-about">
+      <section id="section-about" class="section-about">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Exciting tours for adventurous people
@@ -90,7 +91,7 @@
         </div>
       </section>
       <!-- FEATURES -->
-      <section class="section-features">
+      <section id="section-features" class="section-features">
         <div class="row">
           <div class="col-1-of-4">
             <div class="feature-box">
@@ -123,7 +124,7 @@
         </div>
       </section>
       <!-- TOURS -->
-      <section class="section-tours">
+      <section id="section-tours" class="section-tours">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Most popular tours
@@ -151,7 +152,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -177,7 +178,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$497</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -203,7 +204,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$897</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -215,7 +216,7 @@
         </div>
       </section>
       <!-- TESTIMONIALS -->
-      <section class="section-stories">
+      <section id="section-stories" class="section-stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="img/video.mp4" type="video/mp4" />
@@ -265,7 +266,7 @@
       </section>
 
       <!-- BOOKING -->
-      <section class="section-book">
+      <section id="section-book" class="section-book">
         <div class="row">
           <div class="book">
             <div class="book__form">
@@ -304,7 +305,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="footer__logo-box">
         <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo" />
       </div>
@@ -328,5 +329,26 @@
         </div>
       </div>
     </footer>
+
+    <!-- POPUP -->
+    <div id="popup" class="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img" />
+          <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img" />
+        </div>
+        <div class="popup__right">
+          <a href="#section-tours" class="popup_close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">Import &ndash; Please read these terms before booking</h3>
+          <p class="popup__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid soluta animi voluptates aspernatur dolorum saepe voluptatum, cum et perferendis ea
+            sequi numquam quisquam sed, eligendi veniam labore! Fuga, totam magnam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maiores
+            accusamus in dolorum molestias praesentium magni illo unde maxime omnis quas consectetur, numquam beatae nobis quod harum porro tenetur ea.
+          </p>
+          <a href="#" class="btn btn--green">Book now</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
