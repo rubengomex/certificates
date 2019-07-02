@@ -4,7 +4,8 @@ import {
   GraphQLString,
   GraphQLInt,
   GraphQLSchema,
-  GraphQLList
+  GraphQLList,
+  GraphQLNonNull
 } from 'graphql'
 
 const Company = new GraphQLObjectType({
@@ -47,7 +48,39 @@ const User = new GraphQLObjectType({
   })
 })
 
-const RootQuery = new GraphQLObjectType({
+const mutation = new GraphQLObjectType({
+  name: 'Mutation',
+  fields: {
+    addUser: {
+      type: User,
+      args: {
+        firstName: { type: new GraphQLNonNull(GraphQLString) },
+        age: { type: new GraphQLNonNull(GraphQLInt) },
+        companyId: { type: GraphQLString }
+      },
+      resolve: async (parent, { firstName, age }) => {
+        const user = await axios
+          .post('http://localhost:3000/users', { firstName, age })
+          .then(({ data }) => data)
+
+        return user
+      }
+    },
+    deleteUser: {
+      type: User,
+      args: { id: { type: new GraphQLNonNull(GraphQLString) },
+      resolve: async (parent, { id }) => {
+        const user = await axios
+          .delete(`http://localhost:3000/users/${id}`)
+          .then(({ data }) => data)
+
+        return user
+      }
+    }
+  }
+})
+
+const query = new GraphQLObjectType({
   name: 'RooQuery',
   fields: {
     user: {
@@ -75,4 +108,4 @@ const RootQuery = new GraphQLObjectType({
   }
 })
 
-export default new GraphQLSchema({ query: RootQuery })
+export default new GraphQLSchema({ query, mutation })

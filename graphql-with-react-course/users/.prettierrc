@@ -3,6 +3,5 @@
   "singleQuote": true,
   "trailingComma": "none",
   "eslintIntegration": true,
-  "printWidth": 80,
-  "disableLanguages": []
+  "printWidth": 80
 }
