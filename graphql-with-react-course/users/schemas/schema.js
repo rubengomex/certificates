@@ -66,6 +66,28 @@ const mutation = new GraphQLObjectType({
         return user
       }
     },
+    editUser: {
+      type: User,
+      args: {
+        id: { type: new GraphQLNonNull(GraphQLString) },
+        firstName: { type: GraphQLString },
+        age: { type: GraphQLInt },
+        companyId: { type: GraphQLString }
+      },
+      resolve: async (parent, {
+        id, firstName, age, companyId
+      }) => {
+        const user = await axios
+          .patch(`http://localhost:3000/users/${id}`, {
+            firstName,
+            age,
+            companyId
+          })
+          .then(({ data }) => data)
+
+        return user
+      }
+    },
     deleteUser: {
       type: User,
       args: { id: { type: new GraphQLNonNull(GraphQLString) } },
@@ -81,7 +103,7 @@ const mutation = new GraphQLObjectType({
 })
 
 const query = new GraphQLObjectType({
-  name: 'RooQuery',
+  name: 'Query',
   fields: {
     user: {
       type: User,
