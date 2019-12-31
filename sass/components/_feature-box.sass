@@ -7,6 +7,9 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, .15)
   transition: all .2s
 
+  +respond(tab-port)
+    padding: 2rem
+
   &:hover
     transform: scale(1.1)
 
@@ -17,4 +20,7 @@
     background-image: linear-gradient(to right,$color-primary-light, $color-primary-dark)
     -webkit-background-clip: text
     color: transparent
+
+    +respond(tab-port)
+      margin-bottom: 0
   // &__text
